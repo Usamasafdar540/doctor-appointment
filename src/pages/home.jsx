@@ -1,8 +1,13 @@
+import Header from "../components/Header"
+import SpecialityMenu from "../components/SpecialityMenu"
 
 
 const home = () => {
   return (
-    <div> </div>
+    <div> 
+      <Header/>
+      <SpecialityMenu/>
+    </div>
   )
 }
 
