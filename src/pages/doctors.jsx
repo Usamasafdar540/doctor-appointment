@@ -17,12 +17,12 @@ const Doctors = () => {
   };
   useEffect(() => {
     applyFilter();
-  }, [speciality, doctors]);
+  });
 
   // console.log(speciality)
   return (
     <div>
-      <p className="text-gray-600">browse through doctors specialitys</p>
+      <p className="text-gray-600">browse through doctors speciality</p>
       <div className="flex flex-col sm:flex-row items-start gap-5 mt-5">
         <div className="flex flex-col text-gray-500 text-sm gap-4" >
           <p className="w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounder transition-all cursor-pointer">General physician</p>
