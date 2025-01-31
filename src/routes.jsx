@@ -1,5 +1,5 @@
 
-import Home from './pages/Home';
+import Home from './pages/home';
 import Doctors from './pages/Doctors';
 import About from './pages/about';
 import Login from './pages/Login';

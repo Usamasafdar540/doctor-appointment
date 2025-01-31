@@ -4,7 +4,7 @@ import SpecialityMenu from "../components/SpecialityMenu"
 import TopDoctors from "../components/TopDoctors"
 
 
-const home = () => {
+const Home = () => {
   return (
     <div> 
       <Header/>
@@ -15,4 +15,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home
