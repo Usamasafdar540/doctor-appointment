@@ -1,8 +1,8 @@
 
-import Home from './pages/home';
-import Doctors from './pages/doctors';
+import Home from './pages/Home';
+import Doctors from './pages/Doctors';
 import About from './pages/about';
-import Login from './pages/login';
+import Login from './pages/Login';
 import Contact from './pages/contact';
 import MyProfile from './pages/myProfile';
 import MyAppointments from './pages/myAppointments';

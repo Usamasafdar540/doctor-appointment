@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom'
 import { allRoutes } from './routes'
 import Navbar from './components/navbar'
+import Footer from './components/Footer'
 const App = () => {
   return (
     <div className='mx-20 sm:max-[10%]'>
@@ -13,7 +14,7 @@ const App = () => {
         ))}
       </Routes>
 
-
+<Footer/>
     </div>
   )
 }
