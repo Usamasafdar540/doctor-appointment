@@ -7,7 +7,7 @@ import Contact from './pages/contact';
 import MyProfile from './pages/myProfile';
 import MyAppointments from './pages/myAppointments';
 import Appointment from './pages/appointment';
-// updated
+
 // Define all routes (both protected and unprotected)
 export const allRoutes = [
   {
