@@ -7,6 +7,7 @@ const Doctors = () => {
   const { doctors } = useContext(AppContext);
   const [filterDoc, setFilterDoc] = useState([]);
   const navigate = useNavigate();
+  const [showFilters, setShowFilters] = useState(false);
 
   const specialties = [
     "General physician",
@@ -42,7 +43,19 @@ const Doctors = () => {
       <div className="flex flex-col sm:flex-row gap-5">
         <div className="w-full sm:w-1/4 bg-gray-100 p-4 rounded-lg">
           <p className="text-lg font-semibold mb-4">Specialties</p>
-          <div className="flex flex-col gap-4">
+          <button
+            className={`mb-5 py-1 px-3 border rounded text-sm transition-all sm:hidden ${
+              showFilters ? "bg-primary text-white" : ""
+            }`}
+            onClick={() => setShowFilters((prev) => !prev)}
+          >
+            Filters
+          </button>
+          <div
+            className={`flex flex-col gap-4 text-sm text-gray-600 ${
+              showFilters ? "flex" : "hidden sm:flex"
+            }`}
+          >
             {specialties.map((speciality, index) => (
               <p
                 key={index}

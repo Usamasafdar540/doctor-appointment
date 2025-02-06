@@ -49,7 +49,9 @@ const RelatedDoctors = ({ speciality, docId }) => {
             </div>
           ))
         ) : (
-          <p className="text-gray-500">No related {speciality} specialists found.</p>
+          <p className="text-gray-500">
+            No related {speciality} specialists found.
+          </p>
         )}
       </div>
     </div>
