@@ -25,6 +25,7 @@ const Navbar = () => {
         alt="Logo"
       />
 
+      {/* Desktop Navigation */}
       <ul className="hidden md:flex items-start gap-5 font-medium">
         {menuItems.map((item) => (
           <NavLink key={item.path} to={item.path} className="py-1">
@@ -33,31 +34,26 @@ const Navbar = () => {
         ))}
       </ul>
 
+      {/* Right Section */}
       <div className="flex items-center gap-4">
         {token ? (
-          <div className="relative group cursor-pointer">
-         <div className="flex gap-2">
-         <img className="w-8 rounded-full" src={assets.profile_pic} alt="Profile" />
-         <img className="w-2.5" src={assets.dropdown_icon} alt="Dropdown" />
-         </div>
-            <div className="absolute top-10 right-0 pt-2 text-base font-medium text-gray-500 z-20 hidden group-hover:block">
+          <div className="relative group">
+            {/* Profile Image & Dropdown Icon */}
+            <div className="flex items-center gap-1 cursor-pointer">
+              <img className="w-8 h-8 rounded-full" src={assets.profile_pic} alt="Profile" />
+              <img className="w-2.5 h-2.5" src={assets.dropdown_icon} alt="Dropdown" />
+            </div>
+
+            {/* Dropdown Menu (Fixed Hover Issue) */}
+            <div className="absolute top-10 right-0 pt-2 text-base font-medium text-gray-500 z-20 hidden group-hover:flex flex-col">
               <div className="min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4 shadow-lg">
-                <p
-                  onClick={() => navigate("/myprofile")}
-                  className="hover:text-black cursor-pointer"
-                >
+                <p onClick={() => navigate("/myprofile")} className="hover:text-black cursor-pointer">
                   My Profile
                 </p>
-                <p
-                  onClick={() => navigate("/myappointments")}
-                  className="hover:text-black cursor-pointer"
-                >
+                <p onClick={() => navigate("/myappointments")} className="hover:text-black cursor-pointer">
                   My Appointments
                 </p>
-                <p
-                  onClick={() => setToken(false)}
-                  className="hover:text-black cursor-pointer"
-                >
+                <p onClick={() => setToken(false)} className="hover:text-black cursor-pointer">
                   Logout
                 </p>
               </div>
@@ -106,9 +102,7 @@ const Navbar = () => {
               onClick={() => setShowMenu(false)}
               className="py-2 px-4 rounded-full inline-block"
             >
-              <p>
               {item.name}
-              </p>
             </NavLink>
           ))}
         </ul>
